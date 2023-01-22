@@ -1,5 +1,4 @@
 /* fonts */
-
 @font-face {
     font-family: raleway-regular;
     src: url(/fonts/Raleway-Regular.ttf);
@@ -8,4 +7,97 @@
 @font-face {
     font-family: raleway-bold;
     src: url(/fonts/Raleway-Bold.ttf);
+}
+
+/* colors */
+:root{
+    --background-filter: #0a3637c2;
+    --background: #0A3637;
+    --background-footer: #031C1D;
+    --text-yellow: #FFBD59;
+    --text-green: #7ED857;
+}
+
+/* defautl */
+html, body{
+    height:100vh !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background-color: var(--background) !important;
+}
+
+body, body *{
+    font-family: raleway-regular !important;
+    color: white !important;
+}
+
+h1, h2, h3, h4{
+    font-family: raleway-bold !important;
+}
+
+color-yellow{
+    color: var(--text-yellow)!important;
+    font-family: raleway-bold !important;
+}
+
+color-green{
+    color: var(--text-green)!important;
+    font-family: raleway-bold !important;
+
+}
+
+/* navbar */
+
+nav ul{
+    list-style-type: none;   
+}
+
+nav ul li a{
+    font-family: raleway-bold !important;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+nav ul li a.active{
+    color: var(--text-green) !important;
+}
+
+nav ul li a:hover{
+    color: var(--text-yellow) !important;
+    font-size: 1.5rem !important;
+}
+
+
+/* hero */
+
+.hero-section{
+    
+    background-image: url(/images/limpeza\ ginasio.jpeg);
+    
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-section .content{
+    background-color: var(--background-filter) !important;
+}
+
+.hero-section .text{
+    margin-left: 20rem;
+}
+
+.hero-section .text h1{
+    font-size: 64px;
+}
+
+.hero-section .text span{
+    font-size: 32px;
+}
+
+/* about */
+
+.about-section{
+    padding-top: 8rem;
+    margin-left: 15rem;
 }
