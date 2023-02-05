@@ -1,12 +1,12 @@
 /* fonts */
 @font-face {
     font-family: raleway-regular;
-    src: url(/fonts/Raleway-Regular.ttf);
+    src: url(fonts/Raleway-Regular.ttf);
 }
 
 @font-face {
     font-family: raleway-bold;
-    src: url(/fonts/Raleway-Bold.ttf);
+    src: url(fonts/Raleway-Bold.ttf);
 }
 
 /* colors */
@@ -72,7 +72,7 @@ nav ul li a:hover{
 
 .hero-section{
     
-    background-image: url(/images/limpeza\ ginasio.jpeg);
+    background-image: url(images/limpeza\ ginasio.jpeg);
     
     background-position: 0% 25%;
     background-repeat: no-repeat;
