@@ -1,12 +1,12 @@
 /* fonts */
 @font-face {
     font-family: raleway-regular;
-    src: url(fonts/Raleway-Regular.ttf);
+    src: url(/fonts/Raleway-Regular.ttf);
 }
 
 @font-face {
     font-family: raleway-bold;
-    src: url(fonts/Raleway-Bold.ttf);
+    src: url(/fonts/Raleway-Bold.ttf);
 }
 
 /* colors */
@@ -14,90 +14,393 @@
     --background-filter: #0a3637c2;
     --background: #0A3637;
     --background-footer: #031C1D;
-    --text-yellow: #FFBD59;
-    --text-green: #7ED857;
+    --color-yellow: #FFBD59;
+    --color-green: #7ED857;
+
+    .yellow{
+        color: var(--color-yellow);
+    }
+
+    .green{
+        color: var(--color-green);
+    }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--color-green);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-yellow);
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--background);
 }
 
 /* defautl */
 html, body{
-    height:100vh !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-    background-color: var(--background) !important;
+    height:100vh ;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--background);
+    scroll-behavior: smooth;
 }
 
 body, body *{
-    font-family: raleway-regular !important;
-    color: white !important;
+    font-family: raleway-regular;
+    color: white;
 }
 
 h1, h2, h3, h4{
-    font-family: raleway-bold !important;
+    font-family: raleway-bold;
 }
 
-color-yellow{
-    color: var(--text-yellow)!important;
-    font-family: raleway-bold !important;
-}
-
-color-green{
-    color: var(--text-green)!important;
-    font-family: raleway-bold !important;
-
-}
 
 /* navbar */
-
-nav ul{
-    list-style-type: none;   
-}
-
 nav ul li a{
-    font-family: raleway-bold !important;
-    text-decoration: none;
-    transition: all 0.3s;
+    font-family: raleway-bold;
+    transition: all 0.4s;
 }
 
 nav ul li a.active{
-    color: var(--text-green) !important;
+    color: var(--color-green);
 }
 
 nav ul li a:hover{
-    color: var(--text-yellow) !important;
-    font-size: 1.5rem !important;
+    color: var(--color-yellow);
+    font-size: 1.5rem;
 }
 
+/* hero section */
+.hero-section h1{
+    font-family: raleway-bold;
+}
 
-/* hero */
+.hero-section img{
+    width: 40rem;
+}
 
-.hero-section{
+.hero-section a{
+    border-color: var(--color-green)!important;
+    animation-duration: 1.6s;
+}
+
+.hero-section a:hover{
+    background-color: var(--color-yellow);
+    border-color: var(--color-yellow)!important;
+}
+
+/* about-section */
+
+.about-section h1{
+    font-family: raleway-bold !important; 
+}
+
+.about-section .swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.about-section .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    display: flex;
     
-    background-image: url(images/limpeza\ ginasio.jpeg);
+}
+
+.about-section .swiper-slide h1{
+    font-family: raleway-bold; 
+}
+.swiper-pagination-bullet{
+    height: 1rem !important;
+    width: 1rem !important;
+    background: white !important;
+    opacity: 1 !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+    transition: all 0.3s;
+}
+
+.swiper-pagination-bullet:hover{
+    background: var(--color-green) !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--color-yellow)!important;
+}
+
+/* gallery-section */
+
+.gallerySwiper{
+    height: 50rem;
+}
+
+@media (max-width: 768px) {
+    .gallerySwiper{
+        height: 25rem;
+    }
+}
+
+.gallerySwiper .swiper-slide{
+    display: flex;
+    align-items: end;
+}
+
+.gallerySwiper .swiper-slide .info{
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-filter);
+    padding: 1rem 2rem;
     
-    background-position: 0% 25%;
+}
+
+.gallerySwiper .swiper-slide .info h3{
+    color: var(--color-yellow) !important;
+}
+
+.gallerySwiper .swiper-slide:nth-child(1n){
+    background: url("/images/galeria/limpeza_desengorduragem_maquinas_industriais/1.jpeg");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.hero-section .content{
-    background-color: var(--background-filter) !important;
+.gallerySwiper .swiper-slide:nth-child(2n){
+    background: url("/images/galeria/limpeza_desengorduragem_maquinas_industriais/2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.hero-section .text{
-    margin-left: 20rem;
+.gallerySwiper .swiper-slide:nth-child(3n){
+    background: url("/images/galeria/limpeza_desengorduragem_maquinas_industriais/3.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.hero-section .text h1{
-    font-size: 64px;
+.gallerySwiper .swiper-slide:nth-child(4n){
+    background: url("/images/galeria/limpeza_desengorduragem_maquinas_industriais/4.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.hero-section .text span{
-    font-size: 32px;
+.gallerySwiper .swiper-slide:nth-child(5n){
+    background: url("/images/galeria/limpeza_desengorduragem_maquinas_industriais/5.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* about */
+.gallerySwiper .swiper-slide:nth-child(6n){
+    background: url("/images/galeria/limpeza_higienizaçao_pavilhoes_desportivos/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-.about-section{
-    padding-top: 8rem;
-    margin-left: 15rem;
+.gallerySwiper .swiper-slide:nth-child(7n){
+    background: url("/images/galeria/limpeza_higienizaçao_pavilhoes_desportivos/2.jpeg");
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(8n){
+    background: url("/images/galeria/trabalhos_verticais/1.jpeg");
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(9n){
+    background: url("/images/galeria/trabalhos_verticais/2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(10n){
+    background: url("/images/galeria/limpeza_higienização_eventos_espaços_culturais/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(11n){
+    background: url("/images/galeria/limpeza_higienização_eventos_espaços_culturais/2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(12n){
+    background: url("/images/galeria/limpeza_higienização_eventos_espaços_culturais/3.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(13n){
+    background: url("/images/galeria/recuperaçao_requalificaçao_pisos/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(14n){
+    background: url("/images/galeria/recuperaçao_requalificaçao_pisos/2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(15n){
+    background: url("/images/galeria/limpeza_geral/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(16n){
+    background: url("/images/galeria/limpeza_geral/2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-slide:nth-child(17n){
+    background: url("/images/galeria/limpeza_requalificaçao_montras_comerciais_retiragem_vinil/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallerySwiper .swiper-button-next, .gallerySwiper .swiper-button-prev{
+    color: var(--color-yellow);
+}
+
+/* services-section */
+
+.services-section h1{
+    font-family: raleway-bold !important; 
+}
+
+.background_filter{
+    background: var(--background-filter) !important;
+}
+
+.image.sistema_exaustao{
+    background-image: url("/images/servicos/sistema_exaustao.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.image.sistema_climatizacao_exaustao{
+    background-image: url("/images/servicos/sistema_climatizacao.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.comerciais{
+    background-image: url("/images/servicos/comerciais.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.industriais{
+    background-image: url("/images/servicos/industriais.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.hospitalar{
+    background-image: url("/images/servicos/hospitalar.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.escolar{
+    background-image: url("/images/servicos/escolar.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.fachadas{
+    background-image: url("/images/servicos/fachadas.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.pos_obra{
+    background-image: url("/images/servicos/pos_obra.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.eventos{
+    background-image: url("/images/servicos/eventos.jpeg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.grafitis{
+    background-image: url("/images/servicos/grafitis.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.image.estacionamentos{
+    background-image: url("/images/servicos/estacionamentos.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;    
+}
+
+.servicesSwiper .swiper-slide{
+    text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: calc((100% - 30px) / 2) !important;
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+@media (max-width: 768px){ 
+    .servicesSwiper .swiper-slide .desc ul{
+        font-size: 0.55rem !important;
+    }
+}
+
+footer{
+    background-color: var(--background-footer);
+    bottom: 0;
+}
+
+footer .image img{
+    width: 15rem;
 }

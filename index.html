@@ -1,66 +1,418 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- css -->
     <link rel="stylesheet" href="styles/main.css">
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- meta tags -->
+    <meta name="title" content="Bcaravela">
+    <meta name="description" content="A B.Caravela é uma empresa sediada em Oliveira de Azeméis, que atua em vários setores de mercado.">
+    <meta name="keywords" content="bcaravela, limpezas, servicos, serviços, limpeza de eventos, limpeza grafitis, limpeza hottes, limpeza condutas, limpeza ventiladores, limpeza filtros, limpeza cozinha, limpezas de sistemas de climatização e exaustão, limpezas comerciais, limpezas de sistemas de climatização e exaustão, limpezas de sistemas de exaustão, limpezas industriais, limpezas no setor hospitalar, limpezas no setor escolar, limpezas de fachadas, limpezas pós obra, limpezas de parques de estacionamento">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
 
-    <!-- owl carousel -->
-    <link rel="stylesheet" href="styles/owl/owl.carousel.css">
-    <link rel="stylesheet" href="styles/owl/owl.theme.default.css">
-    <script src="scripts/owl/owl.carousel.js"></script>
-
-    <!-- scroll magic -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-
-    <title>BCaravela</title>
-    <link rel="icon" type="image/x-icon" href="imgs/fav_icon.png">
+    <title>Bcaravela</title>
+    <link rel="icon" type="image/x-icon" href="images/fav_icon.png">
 </head>
 <body>
-  <!-- navbar -->
-  <nav class="d-flex justify-content-center flex-column h-100 position-fixed">
-    <ul>
-      <li class="mb-4">
-        <a href="#inicio">Inicio</a>
-      </li>
-      <li class="mb-4">
-        <a href="#sobre">Sobre</a>
-      </li>
-      <li class="mb-4">
-        <a href="#serviços">Serviços</a>
-      </li>
-      <li class="">
-        <a href="#contactos">Contactos</a>
-      </li>
-    </ul>
-  </nav>
+    <!-- navbar -->
+    <nav class="fixed hidden top-1/2 -translate-y-1/2 p-12 md:block">
+        <ul class="flex flex-col gap-y-8">
+            <li class="">
+              <a href="#inicio">Início</a>
+            </li>
+            <li class="">
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li class="">
+                <a href="#galeria">Galeria</a>
+              </li>
+            <li class="">
+              <a href="#serviços">Serviços</a>
+            </li>
+            <li class="">
+              <a href="#contactos">Contactos</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- hero section -->
+    <section id="inicio" class="md:ml-44 hero-section h-full flex flex-col items-center justify-center">
+        <img src="/images/logo.png" alt="logo">
+        <h1 class="text-xl md:text-6xl">Bem-vindo(a) à <span class="yellow">B</span><span class="green">caravela</span></h1>
+        <p class="text-center">A B.Caravela é uma empresa especializada em limpezas profissionais e industriais.</p>
+        <a class="animate__animated animate__pulse animate__infinite ease-in duration-300 mt-20 p-3 border-2 rounded-full hover:px-5" href="#sobre">Venha conhecer-nos</a>
+    </section>
+    <!-- about section -->
+    <section id="sobre" class="md:ml-44 about-section flex h-auto text-center flex-col">
+        <h1 class="my-12 text-2xl md:text-5xl yellow">Sobre</h1>
+        <div class="swiper aboutSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mb-12">
+                <div class="w-full md:w-2/5 text text-center px-5 md:text-left md:px-0">
+                    <h1 class="text-lg md:text-4xl green mb-5">A Empresa<span>:</span></h1>
+                    <p class="mb-5 text-justify text-base md:text-xl lg:text-3xl">A B.Caravela é uma empresa sediada em Oliveira de Azeméis, que atua em vários setores de mercado.</p>
+                    <p class="mb-5 text-justify text-base md:text-xl lg:text-3xl">Presentes no mercado das limpezas profissionais industriais, apostamos fortemente no rigor e na qualidade de serviço.</p>
+                    <p class="text-justify text-base md:text-xl lg:text-3xl">A nossa diversidade de serviço faz com que possamos corresponder com os elevados padrões de exigência junto dos nossos clientes, apostando também na inovação, garantindo assim a qualidade que nos é característica.</p>
+                </div>
+                <div class="hidden md:w-3/5 images align-center md:flex gap-8 items-center justify-center flex-col xl:flex-row">
+                    <img class="w-64 rounded-2xl" src="/images/sobre/empresa/sobre1.jpeg" alt="">
+                    <img class="hidden lg:block w-64 rounded-2xl" src="/images/sobre/empresa/sobre2.jpeg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide mb-12">
+                <div class="w-full md:w-2/5 text text-center px-5 md:text-left md:px-0">
+                    <h1 class="text-lg md:text-4xl green mb-5">A nossa visão<span>:</span></h1>
+                    <p class="text-justify text-base md:text-xl lg:text-3xl">Sermos reconhecidos como uma marca de confiança pelos nossos clientes e pela nossa valorização enquanto organização, apostando na inovação técnica e profissional dos nossos colaboradores, cumprindo com rigor com todos os valores institucionais.</p>
+                </div>
+                <div class="hidden md:w-3/5 images align-center md:flex gap-8 items-center justify-center">
+                    <img class="w-64 lg:w-96 rounded-2xl" src="/images/sobre/nossa_visao/visao.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide mb-12">
+                <div class="w-full md:w-2/5 text text-center px-5 md:text-left md:px-0">
+                    <h1 class="text-lg md:text-4xl green mb-5">Os nossos valores<span>:</span></h1>
+                    <p class="mb-5 text-justify text-base md:text-xl lg:text-3xl">Apostar na qualidade de serviço, na formação profissional dos nossos colaboradores, no nosso exigente sistema de gestão, planeamento e execução de trabalho, investir na inovação tecnológica, para que possamos ir de encontro às exigências atuais e futuras dos mercados em que estamos inseridos.</p>
+                    <p class="text-justify text-base md:text-xl lg:text-3xl">Os nossos clientes são a nossa prioridade, o que faz com que tenhamos que ir mais além dos desafios a que nos propusemos.</p>
+                </div>
+                <div class="hidden md:w-3/5 images align-center md:flex gap-8 items-center justify-center flex-col">
+                    <img class="w-80 rounded-2xl" src="/images/sobre/nosso_valor/valor1.jpg" alt="">
+                    <img class="hidden lg:block w-80 rounded-2xl" src="/images/sobre/nosso_valor/valor2.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination static"></div>
+        </div>
+    </section>
+    <!-- gallery section -->
+    <section id="galeria" class="md:ml-44 services-sections flex text-center flex-col">
+        <h1 class="my-12 text-2xl md:text-5xl yellow">Galeria</h1>
+        <div class="swiper gallerySwiper w-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e desengorduragem de máquinas industriais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e desengorduragem de máquinas industriais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e desengorduragem de máquinas industriais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e desengorduragem de máquinas industriais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e desengorduragem de máquinas industriais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização de pavilhões desportivos</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização de pavilhões desportivos</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>trabalhos verticais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>trabalhos verticais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização em eventos e espaços culturais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização em eventos e espaços culturais</h3>
+                </div>  
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização em eventos e espaços culturais</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>recuperação e requalificação de pisos</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>recuperação e requalificação de pisos</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização de espaços sanitários, pavilhões desportivos, piscinas municipais, escolas, entre outros</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e higienização de espaços sanitários, pavilhões desportivos, piscinas municipais, escolas, entre outros</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="info">
+                    <h3>limpeza e requalificação de montras comerciais, retiragem de vinil</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- services section -->
+    <section id="serviços" class="md:ml-44 services-sections flex h-full text-center flex-col">
+        <h1 class="my-12 text-2xl md:text-5xl yellow">Serviços</h1>
+        <div class="swiper servicesSwiper h-full w-full ml-auto mr-auto">
+            <div class="swiper-wrapper mb-12">
+              <div class="swiper-slide">
+                <div class="image sistema_exaustao h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas de sistemas de exaustão</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Hottes</li>
+                        <li class="text-black">Condutas</li>
+                        <li class="text-black">Ventiladores de Extração</li>
+                        <li class="text-black">Filtros Eletrostáticos</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image sistema_climatizacao_exaustao h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas de sistemas de climatização e exaustão</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Sistemas de exaustão de cozinha</li>
+                        <li class="text-black">Equipamentos</li>
+                        <li class="text-black">Ventiladores</li>
+                        <li class="text-black">Desengorduragem</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image comerciais h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas comerciais</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Limpeza de grandes superfícies comerciais</li>
+                        <li class="hidden sm:visable text-black">Limpeza de pequenas superfícies comerciais</li>
+                        <li class="text-black">Limpeza de armazéns e áreas de logística</li>
+                        <li class="text-black">Limpeza de lojas</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image industriais h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas industriais</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="hidden sm:visable text-black">Limpezas de áreas de produção</li>
+                        <li class="hidden sm:visable text-black">Limpezas de pavilhões</li>
+                        <li class="text-black">Limpeza em altura de pavilhões (vidros, fachadas etc…)</li>
+                        <li class="text-black">Limpeza e desengorduragem de máquinas</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image hospitalar h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas no setor hospitalar</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Limpeza de hospitais</li>
+                        <li class="text-black">Limpeza de clínicas</li>
+                        <li class="text-black">Limpeza de clínicas veterinárias</li>
+                        <li class="text-black">Limpeza de clínicas dentárias</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image escolar h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas no setor escolar</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Limpeza de escolas</li>
+                        <li class="text-black">Limpeza de creches e infantários</li>
+                        <li class="text-black">Limpeza de colégios</li>
+                        <li class="text-black">Limpeza de pavilhões desportivos</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image fachadas h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas de fachadas</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Em pedra</li>
+                        <li class="text-black">Cerâmica</li>
+                        <li class="text-black">Vidro</li>
+                        <li class="text-black">Entre outras…</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image pos_obra h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas pós obra</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Pavilhões industriais</li>
+                        <li class="text-black">Edifícios</li>
+                        <li class="text-black">Residências</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image eventos h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas em eventos</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Públicos (indoor, outdoor)</li>
+                        <li class="text-black">Privados (indoor, outdoor)</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image grafitis h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas de grafitis</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Superfícies lisas (metálicas, lacadas, polidas)</li>
+                        <li class="text-black">Superfícies porosas (paredes interiores, pedra, etc…)</li>
+                        <li class="hidden sm:visable text-black">Superfícies rugosas (superfícies areadas, superfícies com relevo etc…)</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image estacionamentos h-2/4 flex items-center w-full">
+                    <div class="background_filter flex justify-center items-center w-full h-full">
+                        <span class="yellow text-sm sm:text-lg">Limpezas de parques de estacionamento</span>
+                    </div>
+                </div>
+                <div class="desc h-2/4 flex w-full items-center text-left">
+                    <ul class="ml-7 list-disc text-sm md:text-xl">
+                        <li class="text-black">Subterrâneos</li>
+                        <li class="text-black">Superfície</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- footer -->
+    <footer id="contactos" class="mt-12 py-4 px-8 w-full flex flex-col md:flex-row">
+        <div class="image w-full md:w-6/12 flex items-center justify-center">
+            <img class="w-4/12" src="/images/footer_logo.png" alt="">
+        </div>
+        <div class="contacts w-full md:w-6/12 flex items-left justify-center flex-col text-left">
+            <div><i class="bi bi-telephone-fill yellow"></i><span class="green">Telefone</span>: 256818393 (chamada para a rede fixa nacional)</div>
+            <div><i class="bi bi-phone-fill yellow"></i><span class="green">Número Movel</span>: 913470190(chamada para a rede móvel nacional)</div>
+            <div><i class="bi bi-envelope-fill yellow"></i><span class="green">Email</span>: geral@bcaravela.pt</div>
+        </div>
+    </footer>
+    
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <!-- hero section -->
-  <div class="hero-section h-100">
-    <div class="content h-100">
-      <img class="w-25 position-absolute" src="images/logo.png" alt="logo_bcaravela">
-      <div class="text d-flex justify-content-center h-100 flex-column ">
-        <h1 class="text-left">Bem-vindo(a) à <color-yellow>B</color-yellow><color-green>caravela</color-green></h1>
-        <span class="text-left">A B.Caravela é uma empresa especializada em limpezas<br> profissionais e industriais. Venha conhecer-nos!</span>
-      </div>
-    </div>
-  </div>
-  <!-- about -->
-  <div class="about-section h-100" id="sobre">
-    <h1><color-yellow>Sobre</color-yellow></h1>
-  </div>
-  <!-- services -->
-  <div class="services-section h-100">
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".aboutSwiper", {
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
 
-  </div>
-  <!-- footer -->
+        var swiper = new Swiper(".gallerySwiper", {
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        var swiper = new Swiper(".servicesSwiper", {
+            slidesPerView: 2,
+            grid: {
+                rows: 2,
+            },
+            spaceBetween: 30,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false
+            },
+        });
+    </script>
 </body>
 </html>
